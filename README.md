@@ -10,9 +10,22 @@ Bloom filter algorithm implementation in golang.
 	2.
 	     1000 size of bf
 		 1000 item insert.
-		 80 non existent query 51 wrong return, 40 non existent return 21 wrong, 20 non existent return 14 wrong, 10 non existent return 5
+		 80 non existent query 51 wrong return, 40 non existent return 29 wrong, 20 non existent return 14 wrong, 10 non existent return 5
 
 	3.
 	    10000 size of bf
 		100 item insert
 		40,80 non existent 1 wrong,
+   2 hash function
+    1.
+        1000 size of bf
+		100 item insert.
+		80 non existent 2 wrong info, 40 non existent 0 wrong info   
+    2.
+        1000 size of bf
+	    1000 item insert.
+		80 non existent query 59 wrong return, 40 non existent query 29 wrong return,  
+    3.
+        10000 size of bf
+		100 item insert
+		40,80 non existent 0 wrong,       
