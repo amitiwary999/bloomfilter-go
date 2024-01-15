@@ -1,6 +1,8 @@
 package bloomfiltergo
 
-import "github.com/spaolacci/murmur3"
+import (
+	"github.com/spaolacci/murmur3"
+)
 
 func generateHash(str string) []uint32 {
 	data := []byte(str)
@@ -13,13 +15,13 @@ func generateHash(str string) []uint32 {
 
 type bloomFilter struct {
 	size   int
-	filter []uint32
+	filter []byte
 }
 
 func NewBloomFilter(size int) *bloomFilter {
 	return &bloomFilter{
 		size:   size,
-		filter: make([]uint32, size),
+		filter: make([]byte, size),
 	}
 }
 
